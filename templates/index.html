@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block principal %}
+<div class="container text-center mt-5">
+  <h1 class="mb-4">Temporizador</h1>
+  <div class="row mb-3">
+    <div class="col">
+      <input
+        type="number"
+        class="form-control"
+        id="hours"
+        placeholder="Horas"
+        required
+      />
+    </div>
+    <div class="col">
+      <input
+        type="number"
+        class="form-control"
+        id="minutes"
+        placeholder="Minutos"
+        required
+      />
+    </div>
+    <div class="col">
+      <input
+        type="number"
+        class="form-control"
+        id="seconds"
+        placeholder="Segundos"
+        required
+      />
+    </div>
+  </div>
+  <button class="btn btn-success mr-2" onclick="startTimer()">
+    Iniciar Temporizador
+  </button>
+  <button class="btn btn-warning mr-2" onclick="pauseTimer()">
+    Pausar Temporizador
+  </button>
+  <button class="btn btn-primary mr-2" onclick="resumeTimer()">
+    Reanudar Temporizador
+  </button>
+  <button class="btn btn-danger" onclick="resetTimer()">
+    Reiniciar Temporizador
+  </button>
+  <h1 class="mt-4 lead  digital-clock  text-danger" id="timer"></h1>
+</div>
+
+<script></script>
+
+{% endblock %}

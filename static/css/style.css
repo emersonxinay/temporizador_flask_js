@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Pixelify+Sans:wght@700&display=swap');
+#timer {
+  /* font-family: 'Caveat', cursive;
+  font-family: 'Pixelify Sans', cursive; */
+  font-size: 5em; /* Puedes ajustar el tamaño según tus preferencias */
+}
+
+@font-face {
+  font-family: 'Digital-7';
+  src: url('path_to_your_font_file/digital-7.ttf') format('truetype');
+  /* Reemplaza 'path_to_your_font_file' con la ruta donde se encuentra tu archivo de fuente */
+}
+
+.digital-clock {
+  font-family: 'Digital-7', sans-serif;
+  font-size: 2em; /* Puedes ajustar el tamaño según tus preferencias */
+}
+
+
