@@ -1,50 +1,56 @@
-{% extends "base.html" %} {% block principal %}
-<div class="container text-center mt-5">
-  <h1 class="mb-4">Temporizador</h1>
-  <div class="row mb-3">
-    <div class="col">
-      <input
-        type="number"
-        class="form-control"
-        id="hours"
-        placeholder="Horas"
-        required
-      />
-    </div>
-    <div class="col">
-      <input
-        type="number"
-        class="form-control"
-        id="minutes"
-        placeholder="Minutos"
-        required
-      />
-    </div>
-    <div class="col">
-      <input
-        type="number"
-        class="form-control"
-        id="seconds"
-        placeholder="Segundos"
-        required
-      />
+{% extends "base.html" %}
+{% block principal %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4 text-center">
+      <h1 class="display-4">Temporizador</h1>
+      <div class="input-group mb-3">
+        <select class="form-control custom-select" id="hours">
+          {% for i in range(24) %}
+          <option value="{{ i }}">{{ i }}</option>
+          {% endfor %}
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text">Horas</span>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <select class="form-control custom-select" id="minutes">
+          {% for i in range(60) %}
+          <option value="{{ i }}">{{ i }}</option>
+          {% endfor %}
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text">Minutos</span>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <select class="form-control custom-select" id="seconds">
+          {% for i in range(60) %}
+          <option value="{{ i }}">{{ i }}</option>
+          {% endfor %}
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text">Segundos</span>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-lg btn-block" onclick="startTimer()">Iniciar Temporizador</button>
+      <button class="btn btn-warning btn-lg btn-block mt-3" onclick="pauseTimer()">Pausar Temporizador</button>
+      <button class="btn btn-success btn-lg btn-block mt-3" onclick="resumeTimer()">Reanudar Temporizador</button>
+      <button class="btn btn-danger btn-lg btn-block mt-3" onclick="resetTimer()">Reiniciar Temporizador</button>
     </div>
   </div>
-  <button class="btn btn-success mr-2" onclick="startTimer()">
-    Iniciar Temporizador
-  </button>
-  <button class="btn btn-warning mr-2" onclick="pauseTimer()">
-    Pausar Temporizador
-  </button>
-  <button class="btn btn-primary mr-2" onclick="resumeTimer()">
-    Reanudar Temporizador
-  </button>
-  <button class="btn btn-danger" onclick="resetTimer()">
-    Reiniciar Temporizador
-  </button>
-  <h1 class="mt-4 lead  digital-clock  text-danger" id="timer"></h1>
+  <!-- Temporizador visualizado aquí -->
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-6 text-center">
+      <h1 class="display-4 text-danger" id="timer"></h1>
+    </div>
+  </div>
 </div>
 
-<script></script>
+<script>
+  // Aquí puedes manejar la lógica del temporizador con los valores de #hours, #minutes, #seconds
+</script>
+
 
 {% endblock %}
